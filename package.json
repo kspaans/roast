@@ -1,0 +1,31 @@
+{
+  "name": "roast",
+  "version": "0.0.0",
+  "description": "Spaans Roasting Company",
+  "main": "api/index.js",
+  "dependencies": {
+    "express": "^4.17.3",
+    "stripe": "^8.210.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kspaans/roast.git"
+  },
+  "keywords": [
+    "coffee",
+    "stripe",
+    "checkout",
+    "ecommerce"
+  ],
+  "author": "Kyle Spaans <kyle@spaans.ca>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kspaans/roast/issues"
+  },
+  "homepage": "https://github.com/kspaans/roast#readme"
+}

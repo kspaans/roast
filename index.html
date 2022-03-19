@@ -7,6 +7,7 @@
 <meta name="description" content="Freshly roasted beans available. Hand-roasted in small batches in Domaine Vert Nord, Mirabel.">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
 
@@ -46,7 +47,9 @@
 							<p>4 x 75g whole beans.</p>
 						</div>
 						<div class="card-action">
-							<a class="waves-effect waves-orange btn" href="https://buy.stripe.com/7sI5nG7In9KtbVCcMQ">$10.00 Buy Now</a>
+							<form action="/api/create-checkout-session" method="POST">
+								<button type="submit" id="checkout-button" class="waves-effect waves-orange btn">$10.00 Buy Now</button>
+							</form>
 						</div>
 					</div>
 				</div>
