@@ -8,6 +8,6 @@
   body {
     font-family: 'Inter', sans-serif;
 
-    @apply bg-red-500 text-gray-900 selection:bg-primary-500 selection:text-white dark:text-gray-300 dark:selection:text-gray-900;
+    @apply text-gray-900 selection:bg-primary-500 selection:text-white dark:text-gray-300 dark:selection:text-gray-900;
   }
 }
