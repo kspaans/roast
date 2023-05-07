@@ -1,21 +1,27 @@
 ---
+import { getCollection } from 'astro:content'
+
 import Layout from '@/layouts/Layout.astro'
 import Card from '@/components/Card.astro'
 import Button from '@/components/Button.astro'
+
+const products = await getCollection('products')
 ---
 
 <Layout title="The Roast">
   <div>
     <div class="grid lg:grid-cols-2 gap-8">
-      <Card title="Zimbabwe">
-        <p class="mb-5">this is the body</p>
-        <Button href="/whatever">Click Me</Button>
-      </Card>
+      {
+        products.map((product) => (
+          <Card title={product.data.name}>
+            <p>{product.data.description}</p>
 
-      <Card title="Zimbabwe">this is the body</Card>
-      <Card title="Zimbabwe">this is the body</Card>
-      <Card title="Zimbabwe">this is the body</Card>
-      <Card title="Zimbabwe">this is the body</Card>
+            <Button href={product.data.buyUrl} target="_blank" slot="footer">
+              Buy Me
+            </Button>
+          </Card>
+        ))
+      }
     </div>
   </div>
 </Layout>
